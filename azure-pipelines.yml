@@ -33,7 +33,7 @@ steps:
     prepareTests: false
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'appcenter'
-    appSlug: 'https://appcenter.ms/users/andrey.ivanov-akvelon.com/apps/test-android/'
+    appSlug: 'https://appcenter.ms/users/lekkion/apps/test-android/'
     localeOption: 'en_US'
     devices: 'lekkion/phones'
 
