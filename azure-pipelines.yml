@@ -25,3 +25,14 @@ steps:
     projectFile: '**/*droid*.csproj'
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
+
+- task: AppCenterTest@1
+  inputs:
+    appFile: '**/com.companyname.UITestDemo.apk'
+    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
+    prepareTests: false
+    credentialsOption: 'serviceEndpoint'
+    serverEndpoint: 'appcenter'
+    appSlug: 'https://appcenter.ms/users/andrey.ivanov-akvelon.com/apps/test-android/'
+    localeOption: 'en_US'
+
