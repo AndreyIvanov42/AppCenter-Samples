@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'macOS-latest'
 
 variables:
   buildConfiguration: 'Release'
@@ -32,7 +32,7 @@ steps:
     appFile: '**/com.companyname.UITestDemo.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'uitest'
-    uiTestBuildDirectory: 'Xamarin.UITest\UITestDemo\UITestDemo.UITest'
+    uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/UITestDemo.UITest'
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'appcenter'
     appSlug: 'lekkion/test-android'
