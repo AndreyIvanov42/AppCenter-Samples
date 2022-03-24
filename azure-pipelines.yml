@@ -14,29 +14,19 @@ variables:
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
 
 steps:
-- task: NuGetToolInstaller@0
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '**/*.sln'
-
-- task: XamarinAndroid@1
-  inputs:
-    projectFile: '**/*droid*.csproj'
-    outputDirectory: '$(outputDirectory)'
-    configuration: '$(buildConfiguration)'
-
 - task: AppCenterTest@1
   inputs:
-    appFile: '**/swiftnotes.apk'
+    appFile: '**/com.companyname.UITestDemo.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
-    frameworkOption: 'appium'
-    appiumBuildDirectory: 'Appium/Android/Maven'
+    frameworkOption: 'uitest'
+    uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/UITestDemo.UITest'
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'appcenter'
-    appSlug: 'lekkion/test-appium'
+    appSlug: 'lekkion/test-android'
     devices: 'lekkion/phones'
     localeOption: 'en_US'
+    skipWaitingForResults: true
+
     
 
 
