@@ -31,7 +31,7 @@ steps:
     appFile: '**/swiftnotes.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'appium'
-    appiumBuildDirectory: 'Appium/Android/Maven/src/test/java/com/microsoft/altframeworktraining'
+    appiumBuildDirectory: 'Appium/Android/Maven'
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'appcenter'
     appSlug: 'lekkion/test-appium'
