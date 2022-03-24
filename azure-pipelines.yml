@@ -39,6 +39,7 @@ steps:
     devices: 'lekkion/phones'
     localeOption: 'en_US'
     skipWaitingForResults: true
+    showDebugOutput: true
 
     
 
