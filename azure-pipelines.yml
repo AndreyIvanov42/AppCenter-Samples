@@ -28,14 +28,16 @@ steps:
 
 - task: AppCenterTest@1
   inputs:
-    appFile: '**/com.companyname.UITestDemo.apk'
+    appFile: '**/swiftnotes.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
-    prepareTests: false
+    frameworkOption: 'appium'
+    appiumBuildDirectory: 'Appium/Android/Maven/src/test/java/com/microsoft/altframeworktraining'
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'appcenter'
-    appSlug: 'lekkion/test-android'
-    localeOption: 'en_US'
+    appSlug: 'lekkion/test-appium'
     devices: 'lekkion/phones'
+    localeOption: 'en_US'
+    
 
 
 
