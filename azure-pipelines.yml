@@ -27,16 +27,20 @@ steps:
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
 
-- task: AppCenterTest@1
+- task: Bash@3
   inputs:
-    appFile: '$(outputDirectory)/**/com.appcenter.UITestDemo.apk'
-    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
-    frameworkOption: 'uitest'
-    uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/UITestDemo.UITest'
-    credentialsOption: 'serviceEndpoint'
-    serverEndpoint: 'appcenter'
-    appSlug: 'lekkion/test-android'
-    devices: 'lekkion/phones'
-    localeOption: 'en_US'
-    skipWaitingForResults: true
-    showDebugOutput: true
+    script: ./Xamarin.UITest/UITestDemo/Droid/appcenter-post-build.sh
+
+# - task: AppCenterTest@1
+#   inputs:
+#     appFile: '$(outputDirectory)/**/com.appcenter.UITestDemo.apk'
+#     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
+#     frameworkOption: 'uitest'
+#     uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/UITestDemo.UITest'
+#     credentialsOption: 'serviceEndpoint'
+#     serverEndpoint: 'appcenter'
+#     appSlug: 'lekkion/test-android'
+#     devices: 'lekkion/phones'
+#     localeOption: 'en_US'
+#     skipWaitingForResults: true
+#     showDebugOutput: true
