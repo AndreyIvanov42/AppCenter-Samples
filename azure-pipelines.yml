@@ -21,11 +21,11 @@ steps:
   inputs:
     restoreSolution: '**/UITestDemo.sln'
 
-- task: XamarinAndroid@1
-  inputs:
-    projectFile: '**/UITestDemo.UITest.csproj'
-    outputDirectory: '$(outputDirectory)'
-    configuration: '$(buildConfiguration)'
+# - task: XamarinAndroid@1
+#   inputs:
+#     projectFile: '**/UITestDemo.UITest.csproj'
+#     outputDirectory: '$(outputDirectory)'
+#     configuration: '$(buildConfiguration)'
 
 - task: AppCenterTest@1
   inputs:
