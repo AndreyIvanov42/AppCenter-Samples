@@ -32,16 +32,16 @@ steps:
     targetType: 'inline'
     script: 'ls -la Xamarin.UITest/UITestDemo/packages'
 
-# - task: AppCenterTest@1
-#   inputs:
-#     appFile: '$(outputDirectory)/**/com.appcenter.UITestDemo.apk'
-#     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
-#     frameworkOption: 'uitest'
-#     uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/UITestDemo.UITest'
-#     credentialsOption: 'serviceEndpoint'
-#     serverEndpoint: 'appcenter'
-#     appSlug: 'lekkion/test-android'
-#     devices: 'lekkion/phones'
-#     localeOption: 'en_US'
-#     skipWaitingForResults: true
-#     showDebugOutput: true
+- task: AppCenterTest@1
+  inputs:
+    appFile: '$(outputDirectory)/**/com.appcenter.UITestDemo.apk'
+    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
+    frameworkOption: 'uitest'
+    uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/packages'
+    credentialsOption: 'serviceEndpoint'
+    serverEndpoint: 'appcenter'
+    appSlug: 'lekkion/test-android'
+    devices: 'lekkion/phones'
+    localeOption: 'en_US'
+    skipWaitingForResults: true
+    showDebugOutput: true
