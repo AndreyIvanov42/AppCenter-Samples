@@ -19,11 +19,11 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: '**/UITestDemo.sln'
+    restoreSolution: 'Xamarin.UITest/UITestDemo.sln'
 
 - task: XamarinAndroid@1
   inputs:
-    projectFile: '**/UITestDemo.Droid.csproj'
+    projectFile: 'Xamarin.UITest/**/UITestDemo.Droid.csproj'
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
 
