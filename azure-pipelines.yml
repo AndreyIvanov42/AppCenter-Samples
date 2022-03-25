@@ -35,9 +35,9 @@ steps:
 - task: AppCenterTest@1
   inputs:
     appFile: '$(outputDirectory)/**/com.appcenter.UITestDemo.apk'
-    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
+    artifactsDirectory: 'Xamarin.UITest/UITestDemo/packages'
     frameworkOption: 'uitest'
-    uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/packages'
+    uiTestBuildDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'appcenter'
     appSlug: 'lekkion/test-android'
