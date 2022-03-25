@@ -30,7 +30,7 @@ steps:
 - task: AppCenterTest@1
   inputs:
     appFile: '$(outputDirectory)/**/com.appcenter.UITestDemo.apk'
-    artifactsDirectory: 'GeneratedTest/AppCenter.UITest.Android/bin/Release'
+    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'uitest'
     uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/UITestDemo.UITest'
     credentialsOption: 'serviceEndpoint'
