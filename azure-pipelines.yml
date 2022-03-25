@@ -29,8 +29,8 @@ steps:
 
 - task: Bash@3
   inputs:
-    targetType: 'filePath'
-    filePath: './Xamarin.UITest/UITestDemo/Droid/appcenter-post-build.sh'
+    targetType: 'inline'
+    script: 'ls -la Xamarin.UITest/UITestDemo'
 
 # - task: AppCenterTest@1
 #   inputs:
