@@ -38,7 +38,6 @@ steps:
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'uitest'
     uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/UITestDemo.UITest'
-    uiTestToolsDirectory: 'Xamarin.UITest/UITestDemo/packages/Xamarin.UITest.*/tools'
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'appcenter'
     appSlug: 'lekkion/test-android'
