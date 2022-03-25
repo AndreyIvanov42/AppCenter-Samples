@@ -27,21 +27,30 @@ steps:
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
 
+# - task: AppCenterTest@1
+#   inputs:
+#     appFile: '$(outputDirectory)/**/com.appcenter.UITestDemo.apk'
+#     artifactsDirectory: '$(Build.ArtifactStagingDirectory)'
+#     frameworkOption: 'uitest'
+#     uiTestBuildDirectory: '$(outputDirectory)'
+#     credentialsOption: 'serviceEndpoint'
+#     serverEndpoint: 'appcenter'
+#     appSlug: 'lekkion/test-android'
+#     devices: 'lekkion/phones'
+#     localeOption: 'en_US'
+#     skipWaitingForResults: true
+#     showDebugOutput: true
+
 - task: AppCenterTest@1
   inputs:
     appFile: '$(outputDirectory)/**/com.appcenter.UITestDemo.apk'
-    artifactsDirectory: '$(Build.ArtifactStagingDirectory)'
-    frameworkOption: 'uitest'
-    uiTestBuildDirectory: '$(outputDirectory)'
+    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
+    prepareTests: false
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'appcenter'
-    appSlug: 'lekkion/test-android'
+    appSlug: 'lekkion/xamarin'
     devices: 'lekkion/phones'
     localeOption: 'en_US'
-    skipWaitingForResults: true
-    showDebugOutput: true
-
-    
 
 
 
