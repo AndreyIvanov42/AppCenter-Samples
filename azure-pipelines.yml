@@ -30,7 +30,7 @@ steps:
 - task: AppCenterTest@1
   inputs:
     appFile: '$(outputDirectory)/**/com.appcenter.UITestDemo.apk'
-    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
+    artifactsDirectory: '$(Build.ArtifactStagingDirectory)'
     frameworkOption: 'uitest'
     uiTestBuildDirectory: '$(outputDirectory)'
     credentialsOption: 'serviceEndpoint'
