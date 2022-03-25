@@ -30,7 +30,7 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'ls -la Xamarin.UITest/UITestDemo'
+    script: 'ls -la Xamarin.UITest/UITestDemo/packages'
 
 # - task: AppCenterTest@1
 #   inputs:
