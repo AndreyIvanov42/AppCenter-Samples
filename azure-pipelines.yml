@@ -29,7 +29,7 @@ steps:
 
 - task: AppCenterTest@1
   inputs:
-    appFile: '**/Release/*.apk'
+    appFile: '$(outputDirectory)/**/*.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'uitest'
     uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/UITestDemo.UITest'
