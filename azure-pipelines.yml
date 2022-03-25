@@ -29,7 +29,8 @@ steps:
 
 - task: Bash@3
   inputs:
-    script: ./Xamarin.UITest/UITestDemo/Droid/appcenter-post-build.sh
+    targetType: 'filePath'
+    filePath: 'Xamarin.UITest/UITestDemo/Droid/appcenter-post-build.sh'
 
 # - task: AppCenterTest@1
 #   inputs:
