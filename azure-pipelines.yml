@@ -30,7 +30,7 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'filePath'
-    filePath: 'Xamarin.UITest/UITestDemo/Droid/appcenter-post-build.sh'
+    filePath: './Xamarin.UITest/UITestDemo/Droid/appcenter-post-build.sh'
 
 # - task: AppCenterTest@1
 #   inputs:
