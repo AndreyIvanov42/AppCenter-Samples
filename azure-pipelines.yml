@@ -19,7 +19,7 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: 'Xamarin.UITest/UITestDemo/UITestDemo.sln'
+    restoreSolution: 'src/UITestDemo.sln'
 
 - task: XamarinAndroid@1
   inputs:
@@ -27,17 +27,17 @@ steps:
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'ls -la Xamarin.UITest/UITestDemo/packages'
+# - task: Bash@3
+#   inputs:
+#     targetType: 'inline'
+#     script: 'ls -la src/UITestDemo/packages'
 
 - task: AppCenterTest@1
   inputs:
     appFile: '$(outputDirectory)/**/com.appcenter.UITestDemo.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'uitest'
-    uiTestBuildDirectory: 'Xamarin.UITest/UITestDemo/UITestDemo.UITest'
+    uiTestBuildDirectory: 'src/UITestDemo.UITest'
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'appcenter'
     appSlug: 'lekkion/test-android'
